@@ -1,0 +1,10 @@
+{
+  "contact": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "contactEdit": {
+    "firstName": "Hello",
+    "lastName": "Country"
+  }
+}
