@@ -3,7 +3,7 @@ import { LoginPage } from '../Page_Objects/login.po';
 import {ContactPage} from '../Page_Objects/contact.po';
 
 const testData = require('../Fixtures/login.json');
-const contactData = require('../fixtures/contact.json');
+const contactData = require('../Fixtures/contact.json');
 const {authenticateUser, createEntity, deleteEntity, validateEntity, getEntity} = require ('../helper.spec.js');
 let accessToken;
 
