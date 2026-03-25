@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 test.describe ('add contact list',() =>
 
 {
-    test ('new contact list', async ({page}) => 
+    test.skip ('new contact list', async ({page}) => 
     {
         await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
 

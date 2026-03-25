@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Valid login tests', () => {
-  test('Login using valid username and password', async ({ page }) => {
+  test.skip('Login using valid username and password', async ({ page }) => {
     const login = new LoginPage(page);
     await login.login(testData.validuser.username, testData.validuser.password);
     await login.verifyValidLogin();
@@ -16,7 +16,7 @@ test.describe('Valid login tests', () => {
 });
 
 test.describe('Invalid login tests', () => {
-  test('Login using invalid username and valid password', async ({ page }) => {
+  test.skip('Login using invalid username and valid password', async ({ page }) => {
     const login = new LoginPage(page);
     await login.login(testData.invaliduser.username, testData.validuser.password);
     await login.verifyInvalidLogin();

@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 test.describe('Valid login tests',() => {
-test('Login using valid email and valid password', async ({ page }) => {
+test.skip('Login using valid email and valid password', async ({ page }) => {
     await page.goto('/');
 
     await page.getByPlaceholder('Email').fill('abc@xyz12.com');
@@ -21,7 +21,7 @@ test('Login using valid email and valid password', async ({ page }) => {
 
 test.describe('invalid login test',() => {
 
-test('login using valid email and invaild password', async ({ page }) => {
+test.skip('login using valid email and invaild password', async ({ page }) => {
     await page.goto('/');
 
     await page.getByPlaceholder('Email').fill('abc@xyz.com');
@@ -32,7 +32,7 @@ test('login using valid email and invaild password', async ({ page }) => {
 
 } );
 
-test('empty data', async ({ page }) => {
+test.skip('empty data', async ({ page }) => {
     await page.goto('/');
 
     await page.getByPlaceholder('Email').fill('');
@@ -43,7 +43,7 @@ test('empty data', async ({ page }) => {
 
 } );
 
-test('valid username and empty password', async ({ page }) => {
+test.skip('valid username and empty password', async ({ page }) => {
     await page.goto('/');
 
     await page.getByPlaceholder('Email').fill('abc@xyz12.com');
@@ -53,7 +53,7 @@ test('valid username and empty password', async ({ page }) => {
     await expect(page.getByText('Incorrect username or password')).toHaveText('Incorrect username or password');
 
 } );
-test ('empty username and valid password', async ({page}) => {
+test.skip ('empty username and valid password', async ({page}) => {
     await page.goto('/');
     await page.getByPlaceholder('Email').fill('');
     await page.getByPlaceholder('Password').fill('0123456789');

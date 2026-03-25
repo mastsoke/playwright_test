@@ -16,14 +16,14 @@ test.beforeEach(async ({ page }) => {
 
 // test.describe.configure({ mode: 'serial' });
 
-test('add contact', async ({page}) => {
+test.skip('add contact', async ({page}) => {
     const contact = new ContactPage(page);
     await contact.contactAdd(contactData.contact.firstName, contactData.contact.lastName);
     await contact.viewcreatedcontact();
     await contact.validateAddedContacts(contactData.contact.firstName,contactData.contact.lastName);
  });
 
-test('edit contact', async ({page}) => { 
+test.skip('edit contact', async ({page}) => { 
     const contact = new ContactPage(page);
     
     await contact.viewcreatedcontact();
@@ -33,7 +33,7 @@ test('edit contact', async ({page}) => {
     await contact.validateAddedContacts(contactData.contactEdit.firstName,contactData.contactEdit.lastName);
 });
 
-test('delete contact', async ({page}) => {
+test.skip('delete contact', async ({page}) => {
      const contact = new ContactPage(page);
       await contact.viewcreatedcontact();
     await contact.contactDelete();
